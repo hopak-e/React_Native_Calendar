@@ -1,11 +1,11 @@
 import { Text, View } from "react-native";
 
-const Library = () => {
+const MyPageScreen = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Library</Text>
+      <Text>My&nbsp;Page</Text>
     </View>
   );
 };
 
-export default Library;
+export default MyPageScreen;

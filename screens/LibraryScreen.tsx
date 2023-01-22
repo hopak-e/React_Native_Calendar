@@ -1,11 +1,11 @@
 import { Text, View } from "react-native";
 
-const Calendar = () => {
+const LibraryScreen = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Calendar</Text>
+      <Text>Library</Text>
     </View>
   );
 };
 
-export default Calendar;
+export default LibraryScreen;

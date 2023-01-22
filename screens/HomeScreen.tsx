@@ -1,11 +1,11 @@
 import { Text, View } from "react-native";
 
-const MyPage = () => {
+const HomeScreen = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>My&nbsp;Page</Text>
+      <Text>Home</Text>
     </View>
   );
 };
 
-export default MyPage;
+export default HomeScreen;

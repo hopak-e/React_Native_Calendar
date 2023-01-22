@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
@@ -7,16 +7,16 @@ import {
   SimpleLineIcons,
 } from "@expo/vector-icons";
 
-import Home from "./screens/Home";
-import Calendar from "./screens/Calendar";
-import Library from "./screens/Library";
-import MyPage from "./screens/MyPage";
+import HomeScreen from "./screens/HomeScreen";
+import CalendarScreen from "./screens/CalendarScreen";
+import LibraryScreen from "./screens/LibraryScreen";
+import MyPageScreen from "./screens/MyPageScreen";
 
 export default function App() {
   const BottomTab = createBottomTabNavigator();
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#ffffff" }}>
+    <View style={styles.container}>
       <NavigationContainer>
         <BottomTab.Navigator
           screenOptions={({ route }) => ({
@@ -45,12 +45,16 @@ export default function App() {
             tabBarInactiveTintColor: "gray",
           })}
         >
-          <BottomTab.Screen name="Home" component={Home} />
-          <BottomTab.Screen name="Calendar" component={Calendar} />
-          <BottomTab.Screen name="Library" component={Library} />
-          <BottomTab.Screen name="MyPage" component={MyPage} />
+          <BottomTab.Screen name="Home" component={HomeScreen} />
+          <BottomTab.Screen name="Calendar" component={CalendarScreen} />
+          <BottomTab.Screen name="Library" component={LibraryScreen} />
+          <BottomTab.Screen name="MyPage" component={MyPageScreen} />
         </BottomTab.Navigator>
       </NavigationContainer>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: "#ffffff" },
+});
